@@ -14,6 +14,8 @@
 	<version>1.1.0-SNAPSHOT</version>
 
 	<name>Black Pepper Support Reflect</name>
+	<description>Support for working with Java reflection.</description>
+	<url>https://github.com/BlackPepperSoftware/bp-support-reflect</url>
 	
 	<scm>
 		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-support-reflect.git</connection>
