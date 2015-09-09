@@ -43,6 +43,16 @@
 	</licenses>
 	
 	<scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/BlackPepperSoftware/bp-support-reflect/issues</url>
+	</issueManagement>
+	
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/BlackPepperSoftware/bp-support-reflect</url>
+	</ciManagement>
+
 		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-support-reflect.git</connection>
 		<developerConnection>scm:git:git@github.com:BlackPepperSoftware/bp-support-reflect.git</developerConnection>
 		<tag>HEAD</tag>
