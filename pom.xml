@@ -42,7 +42,6 @@
 	
 	</licenses>
 	
-	<scm>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/BlackPepperSoftware/bp-support-reflect/issues</url>
@@ -53,6 +52,7 @@
 		<url>https://travis-ci.org/BlackPepperSoftware/bp-support-reflect</url>
 	</ciManagement>
 
+	<scm>
 		<connection>scm:git:git@github.com:BlackPepperSoftware/bp-support-reflect.git</connection>
 		<developerConnection>scm:git:git@github.com:BlackPepperSoftware/bp-support-reflect.git</developerConnection>
 		<tag>HEAD</tag>
