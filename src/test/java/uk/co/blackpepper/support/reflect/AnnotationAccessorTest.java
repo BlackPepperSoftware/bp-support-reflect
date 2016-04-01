@@ -53,8 +53,19 @@ public class AnnotationAccessorTest {
 		}
 	}
 	
+	public static class TestInterfaceReturnTypeClass {
+		
+		public TestInterfaceReturnType method() {
+			return null;
+		}
+	}
+	
 	public static class TestReturnType {
 		// simple return type
+	}
+	
+	public interface TestInterfaceReturnType {
+		// interface return type
 	}
 	
 	private ExpectedException thrown = ExpectedException.none();
@@ -93,6 +104,16 @@ public class AnnotationAccessorTest {
 	@Test
 	public void onWithClassThenMethodReturnsInvocationInfo() {
 		assertThat(on(TestClass.class).noAnnotation(), is(instanceOf(InvocationInfo.class)));
+	}
+	
+	@Test
+	public void onWithClassThenMethodReturningInterfaceReturnsInstance() {
+		assertThat(on(TestInterfaceReturnTypeClass.class).method(), is(instanceOf(TestInterfaceReturnType.class)));
+	}
+	
+	@Test
+	public void onWithClassThenMethodReturningInterfaceReturnsInvocationInfo() {
+		assertThat(on(TestInterfaceReturnTypeClass.class).method(), is(instanceOf(InvocationInfo.class)));
 	}
 	
 	@Test
