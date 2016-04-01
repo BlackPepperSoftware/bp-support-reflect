@@ -71,8 +71,15 @@ public final class AnnotationAccessor {
 	
 	private static <T> T enhance(Class<T> clazz, MethodInterceptor interceptor) {
 		Enhancer enhancer = new Enhancer();
-		enhancer.setSuperclass(clazz);
-		enhancer.setInterfaces(new Class<?>[] {InvocationInfo.class});
+		
+		if (clazz.isInterface()) {
+			enhancer.setInterfaces(new Class<?>[] {InvocationInfo.class, clazz});
+		}
+		else {
+			enhancer.setInterfaces(new Class<?>[] {InvocationInfo.class});
+			enhancer.setSuperclass(clazz);
+		}
+
 		enhancer.setCallbackType(MethodInterceptor.class);
 		
 		Factory factory = (Factory) new ObjenesisStd(true).newInstance(enhancer.createClass());
